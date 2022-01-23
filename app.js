@@ -5,13 +5,12 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 const fse = require('fs-extra');
+const render = require("./lib/html");
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-const render = require("./lib/html");
 
-// using inquirer to gather information about the development team members
 let teamMembers = []
 
 const add = () => {
